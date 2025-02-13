@@ -18,7 +18,6 @@ def install_uv():
 def run_datagen(email: str):
     url = "https://raw.githubusercontent.com/sanand0/tools-in-data-science-public/tds-2025-01/project-1/datagen.py"
     script_path = "datagen.py"
-
     # Download the script
     print("Downloading datagen.py...")
     urllib.request.urlretrieve(url, script_path)
@@ -26,7 +25,7 @@ def run_datagen(email: str):
     # Run using `uv`
     try:
         result = subprocess.run(
-            ["sudo","uv", "run", script_path, email],
+            ["uv", "run", script_path, email],
             capture_output=True,
             text=True,
             check=True

@@ -40,6 +40,7 @@ If the task matches one of the following, extract the requested values:
 
 #### **A2: Formatting using Prettier**
 - `"prettier_version"`: Extract the version of Prettier mentioned. If no version is specified, return `"3.4.2"`.
+- `"file_path"`: Extract the file path of the file which is to be formatted.
 
 #### **A3: Counting Days in a File**
 - `"input_file"`: Extract the input file path. If only a filename is given (without `/data/`), assume it's inside `/data/`.
@@ -49,13 +50,33 @@ If the task matches one of the following, extract the requested values:
 #### **A4: Sorting Contacts**
 - `"input_file"`: Extract the input file path. Default to `/data/filename` if `/data/` is missing.
 - `"output_file"`: Extract the output file path. Default to `/data/filename` if `/data/` is missing.
+- `"keys"`: Extract the keys by which the data is to be sorted as a list containing specified keys in specified order
 
 #### **A5: Extracting Log Entries**
-- `"input_file"`: Extract the input file path (should be inside `/data/logs/`). If not specified, default to `/data/filename`.
+- `"logs_dir"`: Extract the directory path of directory where the log files are located (should be inside `/data/logs/`). If not specified, default to `/data/filename`.
 - `"output_file"`: Extract the output file path. Default to `/data/filename` if `/data/` is missing.
+- `num_logs`: Extract the number of log files the task asks to parse (integer). If not mentioned, default 10.
 
 #### **A6: Extracting H1 Titles**
-- `"output_file"`: Extract the output file path (should be inside `/data/docs/`). If not specified, default to `/data/docs/filename`.
+- `"docs_dir"`: Extract the directory path of the directory where the markdown files are located.
+- `"output_file"`: Extract the output file path (should be inside `/data/docs/`). If path not specified but filename given, default to `/data/docs/filename`.
+
+#### **A7: Extracting email content file path**
+- `"input_file"`: Extract the path of the file where the email content is said to be present.
+- `"output_file"`: Extract the path of the output file where the sender's email is to be written.
+
+#### **A8: Extracting credit card**
+- `"input_file"`: Extract the path of the image file which is said to be image of credit card.
+- `"output_file"`: Extract the path of the output file where the output is to be written.
+
+#### **A9: Extracting comments file name**
+- `"input_file"`: Extract the path of the file which is said to have comments as input.
+- `"output_file"`: Extract the path of the output file where the output is to be written.
+
+#### **A10: Extracting data from databases**
+- `"db_file"`: Extract the path of the database file.
+- `"ticket_type"`: Extract the ticket type whose sales need to be calculated from the database.
+- `"output_file"`: Extract the path of the output file where the output is to be written.
 
 ---
 
