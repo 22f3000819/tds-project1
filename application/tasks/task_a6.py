@@ -1,8 +1,7 @@
-from .check_path import ensure_local_path
 import json
 import glob
 import os
-
+from .check_path import ensure_local_path
 
 def extract_h1_and_create_index(docs_dir: str, output_file: str):
     """

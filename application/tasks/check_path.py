@@ -3,7 +3,7 @@ import os
 
 
 RUNNING_IN_CODESPACES = "CODESPACES" in os.environ
-RUNNING_IN_DOCKER = os.path.exists("/.dockerenv")
+RUNNING_IN_DOCKER = os.path.exists("/.dockerenv") or os.path.exists("/run/.containerenv") or os.getenv('container') == 'podman'
 
 
 def ensure_local_path(path: str) -> str:

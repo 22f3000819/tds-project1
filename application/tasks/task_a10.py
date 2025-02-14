@@ -1,5 +1,5 @@
-from .check_path import ensure_local_path
 import sqlite3
+from .check_path import ensure_local_path
 
 def calculate_ticket_sales(db_file: str, ticket_type: str, output_file: str):
 

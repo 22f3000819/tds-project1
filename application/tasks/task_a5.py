@@ -1,6 +1,6 @@
-from .check_path import ensure_local_path
 import glob
 import os
+from .check_path import ensure_local_path
 
 def write_first_line_of_recent_logs(logs_dir: str, output_file: str, num_logs: int = 10):
     # Get all .log files in the directory
